@@ -13,6 +13,7 @@ var pug = require("gulp-pug");
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
+var babel = require('gulp-babel');
 
 // --- Task for images
 
@@ -40,8 +41,24 @@ gulp.task( "css", function () {
     .pipe( gulp.dest("assets/css") )
 } );
 
-// --- Task for images
+// --- Task for js
 
-// --- Task for images
+gulp.task( "js", function () {
+    gulp.src( 'src/js/**/*.js' )
+    .pipe( babel() )
+    .pipe( gulp.dest("assets/js") )
+} );
 
-// --- Task for images
+// --- Task for watch
+
+gulp.task( "watch", function () {
+    gulp.watch( 'src/images/**', ["images"] );
+    gulp.watch( 'src/sass/**/*.scss', ["css"] );
+    gulp.watch( 'src/pug/**/*.pug', ["html"] );
+    gulp.watch( 'src/js/**/*.js', ["js"] );
+} );
+
+// --- Task for alias
+
+gulp.task( "default" , [ "images", "css", "html", "js" ])
+gulp.task( "work" , [ "default", "watch" ])
