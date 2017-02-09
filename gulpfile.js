@@ -10,6 +10,9 @@
 var gulp = require("gulp");
 var image = require("gulp-image");
 var pug = require("gulp-pug");
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var csso = require('gulp-csso');
 
 // --- Task for images
 
@@ -27,7 +30,15 @@ gulp.task( "html", function () {
     .pipe( gulp.dest(".") )
 } );
 
-// --- Task for images
+// --- Task for styles
+
+gulp.task( "css", function () {
+    gulp.src( 'src/sass/**/*.scss' )
+    .pipe( sass().on( "error" , sass.logError ) )
+    .pipe( autoprefixer() )
+    .pipe( csso() )
+    .pipe( gulp.dest("assets/css") )
+} );
 
 // --- Task for images
 
