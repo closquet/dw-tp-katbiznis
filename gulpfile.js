@@ -9,6 +9,7 @@
 
 var gulp = require("gulp");
 var image = require("gulp-image");
+var pug = require("gulp-pug");
 
 // --- Task for images
 
@@ -18,7 +19,13 @@ gulp.task( "images", function () {
     .pipe( gulp.dest("assets/images") )
 } );
 
-// --- Task for styles
+// --- Task for pug
+
+gulp.task( "html", function () {
+    gulp.src( 'src/pug/**/*.pug' )
+    .pipe( pug( {} ) )
+    .pipe( gulp.dest(".") )
+} );
 
 // --- Task for images
 
