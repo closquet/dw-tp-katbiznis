@@ -60,5 +60,5 @@ gulp.task( "watch", function () {
 
 // --- Task for alias
 
-gulp.task( "default" , [ "images", "css", "html", "js" ])
-gulp.task( "work" , [ "default", "watch" ])
+gulp.task( "default" , [ "images", "css", "html", "js" ]);
+gulp.task( "work" , [ "default", "watch" ]);
