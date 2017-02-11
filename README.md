@@ -1,6 +1,7 @@
 # katbiznis
-> Carte de visite dans le cadre du cours de web design.
+> Carte de visite réalisée dans le cadre du cours de web design.
 ***
-_TODO_
 ## Fonctionnement
-_TODO_
+La carte comporte un recto et un verso avec des contenu différents.
+- Sur mobile, les 2 faces sont directement visible
+- Sur desktop, le recto est affiché au chargement de la page et la carte se retourne quand on clic sur l'icône en dessous de la carte.
