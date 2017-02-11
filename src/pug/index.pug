@@ -4,7 +4,30 @@ html(lang="fr")
         meta(charset="utf-8")
         title Ma carte de visite
         link(rel="stylesheet", href="assets/css/styles.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="description" content="Exercice design web: Carte de visite")
+        meta(name="author" content="Eric Closquet")
+        meta(name="keywords" content="exercices, css, html")
+        <!--[if lt IE 9]>
+            script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
 
     body
-        h1 Ma carte de visite
+        h1.body-title.hidden(role="heading" aria-level="1") Carte de visite de Eric Closquet
+
+        section.section.section--recto(aria-labelledby="recto")
+            h2.section__title.hidden#recto(role="heading" aria-level="2") Recto de la carte
+            .section__content
+                p Éric Closquet
+                p Student
+
+        section.section.section--verso(aria-labelledby="verso")
+            h2.section__title.hidden#verso(role="heading" aria-level="2") Verso de la carte
+            .section__content
+                p Email: #[a(href="mailto:eric.closquet@live.be") eric.closquet@live.be]
+                p Phone: #[a(href="tel:0032498405783") +32 (0) 498 40 57 83]
+                p URL: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
+
+
         script(src="assets/js/script.js")

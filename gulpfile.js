@@ -10,15 +10,15 @@
 var gulp = require("gulp");
 var image = require("gulp-image");
 var pug = require("gulp-pug");
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var csso = require('gulp-csso');
-var babel = require('gulp-babel');
+var sass = require("gulp-sass");
+var autoprefixer = require("gulp-autoprefixer");
+var csso = require("gulp-csso");
+var babel = require("gulp-babel");
 
 // --- Task for images
 
 gulp.task( "images", function () {
-    gulp.src( 'src/images/**' )
+    gulp.src( "src/images/**" )
     .pipe( image() )
     .pipe( gulp.dest("assets/images") )
 } );
@@ -26,7 +26,7 @@ gulp.task( "images", function () {
 // --- Task for pug
 
 gulp.task( "html", function () {
-    gulp.src( 'src/pug/**/*.pug' )
+    gulp.src( "src/pug/**/*.pug" )
     .pipe( pug( {} ) )
     .pipe( gulp.dest(".") )
 } );
@@ -34,7 +34,7 @@ gulp.task( "html", function () {
 // --- Task for styles
 
 gulp.task( "css", function () {
-    gulp.src( 'src/sass/**/*.scss' )
+    gulp.src( "src/sass/**/*.scss" )
     .pipe( sass().on( "error" , sass.logError ) )
     .pipe( autoprefixer() )
     .pipe( csso() )
@@ -44,7 +44,7 @@ gulp.task( "css", function () {
 // --- Task for js
 
 gulp.task( "js", function () {
-    gulp.src( 'src/js/**/*.js' )
+    gulp.src( "src/js/**/*.js" )
     .pipe( babel() )
     .pipe( gulp.dest("assets/js") )
 } );
@@ -52,10 +52,11 @@ gulp.task( "js", function () {
 // --- Task for watch
 
 gulp.task( "watch", function () {
-    gulp.watch( 'src/images/**', ["images"] );
-    gulp.watch( 'src/sass/**/*.scss', ["css"] );
-    gulp.watch( 'src/pug/**/*.pug', ["html"] );
-    gulp.watch( 'src/js/**/*.js', ["js"] );
+    gulp.watch( "src/images/**", ["images"] );
+    gulp.watch( "src/sass/**/*.scss", ["css"] );
+    gulp.watch( "src/pug/**/*.pug", ["html"] );
+    gulp.watch( "src/js/**/*.js", ["js"] );
+    console.log("watching...");
 } );
 
 // --- Task for alias
