@@ -14,20 +14,24 @@ html(lang="fr")
         <![endif]-->
 
     body
-        h1.body-title.hidden(role="heading" aria-level="1") Carte de visite de Eric Closquet
+        a.anchor#link-recto
+        a.anchor#link-verso
+        .wrap
+            h1.body-title.hidden(role="heading" aria-level="1") Carte de visite de Eric Closquet
 
-        section.section.section--recto(aria-labelledby="recto")
-            h2.section__title.hidden#recto(role="heading" aria-level="2") Recto de la carte
-            .section__content
-                p Éric Closquet
-                p Student
+            section.section.section--recto(aria-labelledby="recto")
+                h2.section__title.hidden#recto(role="heading" aria-level="2") Recto de la carte
+                .section__content
+                    p Éric Closquet
+                    p Student
 
-        section.section.section--verso(aria-labelledby="verso")
-            h2.section__title.hidden#verso(role="heading" aria-level="2") Verso de la carte
-            .section__content
-                p Email: #[a(href="mailto:eric.closquet@live.be") eric.closquet@live.be]
-                p Phone: #[a(href="tel:0032498405783") +32 (0) 498 40 57 83]
-                p URL: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
-
+            section.section.section--verso(aria-labelledby="verso")
+                h2.section__title.hidden#verso(role="heading" aria-level="2") Verso de la carte
+                .section__content
+                    p Email: #[a(href="mailto:eric.closquet@live.be") eric.closquet@live.be]
+                    p Phone: #[a(href="tel:0032498405783") +32 (0) 498 40 57 83]
+                    p URL: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
+        a.swap(href="#link-verso" title="faire pivoter la carte de visite") swap
+        a.reverse(href="#link-recto" title="faire pivoter la carte de visite") reverse
 
         script(src="assets/js/script.js")

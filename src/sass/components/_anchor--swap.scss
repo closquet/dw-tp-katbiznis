@@ -1,0 +1,36 @@
+.swap{
+    display: none;
+    @media (min-width: 480px)
+    {
+        display: block;
+        width: 19em;
+        margin: 1em auto;
+    }
+}
+#link-verso:target ~ .swap{
+    display: none;
+}
+#link-verso:target ~ .reverse{
+    display: block;
+}
+
+#link-verso:target ~ .wrap .section--recto{
+    animation: 1s linear rotationa;
+}
+#link-verso:target ~ .wrap .section--verso{
+    animation: 2s linear 1s rotationa
+}
+
+@keyframes rotationa {
+    0% { transform: rotateY(90deg);}
+    100% { transform: rotateY(90deg);}
+}
+@keyframes rotationb {
+    100% { transform: rotateY(0deg);}
+}
+
+a.swap, a.reverse{
+    @include hide-text;
+    background: url("../images/flip-icon.svg") no-repeat;
+    height: 30px;
+}
