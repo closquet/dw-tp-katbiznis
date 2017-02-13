@@ -51,7 +51,9 @@ gulp.task( "html", function () {
 
 gulp.task( "css", function () {
     gulp.src( src.scss )
-    .pipe( sass().on( "error" , sass.logError ) )
+    .pipe( sass({
+        includePaths: require('node-bourbon').includePaths
+    }).on( "error" , sass.logError ) )
     .pipe( autoprefixer() )
     .pipe( csso() )
     .pipe( gulp.dest( dest.css ) )

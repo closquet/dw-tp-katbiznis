@@ -738,7 +738,7 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bourbon@^4.3.2:
+bourbon@^4.2.6:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.2.tgz#857582bc516243864d6c8db23d5eeea0343db4a6"
 
@@ -3020,6 +3020,12 @@ natives@^1.1.0:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+node-bourbon@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/node-bourbon/-/node-bourbon-4.2.8.tgz#e444f1f09434ab7650ea318c28e2e103d3f942cd"
+  dependencies:
+    bourbon "^4.2.6"
 
 node-gyp@^3.3.1:
   version "3.5.0"
