@@ -9,10 +9,5 @@
         margin: 0;
         position: absolute;;
         top: 0;
-        transition: all 1s;
-
-        &--verso{
-            transform: rotateY(90deg);
-        }
     }
 }
