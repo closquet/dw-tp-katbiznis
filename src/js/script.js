@@ -7,39 +7,41 @@
 *
 */
 
-const $CardRecto = document.querySelector(".section--recto"),
-    $CardVerso = document.querySelector(".section--verso"),
-    $ButtonSwipe = document.querySelector(".a--swipe");
+const $CardRecto = document.querySelector(".section--recto");
+const $CardVerso = document.querySelector(".section--verso");
+const $ButtonSwipe = document.querySelector(".a--swipe");
 
-let cardState = "recto";
+let sCardState = "recto";
 
-function fEnableVerso() {
+const fEnableVerso = function () {
     $CardVerso.classList.add("front");
     $CardVerso.classList.remove("back");
 };
-function fDisableVerso() {
+const fDisableVerso = function () {
     $CardVerso.classList.add("back");
     $CardVerso.classList.remove("front");
 };
-function fEnableRecto() {
+const fEnableRecto = function () {
     $CardRecto.classList.add("front");
     $CardRecto.classList.remove("back");
 };
-function fDisableRecto() {
+const fDisableRecto = function () {
     $CardRecto.classList.add("back");
     $CardRecto.classList.remove("front");
 };
 
-function fSwipe(oEvent) {
-    oEvent.preventDefault();
-    if (cardState === "recto"){
-        fEnableVerso();
-        setTimeout(fDisableRecto, 500);
-        cardState = "verso";
+
+}
+const fSwipe = function (e) {
+    e.preventDefault();
+    if (sCardState === "recto"){
+        fDisableRecto();
+        setTimeout(fEnableVerso, 1000);
+        sCardState = "verso";
     }else {
-        fEnableRecto();
-        setTimeout(fDisableVerso, 500);
-        cardState = "recto";
+        fDisableVerso();
+        setTimeout(fEnableRecto, 1000);
+        sCardState = "recto";
     }
 };
 
@@ -54,7 +56,7 @@ function fSwipe(oEvent) {
 */
 var fPageIsLoaded = function () {
     // code pour démarrer le script ici
-    $ButtonSwipe.addEventListener("clic", fSwipe, false);
+    $ButtonSwipe.addEventListener("click", fSwipe, false);
 };
 //gestion de l'événement "load" pour démarrer le script
 window.addEventListener("load", fPageIsLoaded, false);
