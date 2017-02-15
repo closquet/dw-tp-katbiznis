@@ -14,8 +14,6 @@ html(lang="fr")
         <![endif]-->
 
     body
-        a.anchor#link-recto
-        a.anchor#link-verso
         .wrap
             h1.body-title.hidden(role="heading" aria-level="1") Carte de visite de Eric Closquet
 
@@ -31,7 +29,6 @@ html(lang="fr")
                     p Email: #[a(href="mailto:eric.closquet@live.be") eric.closquet@live.be]
                     p Phone: #[a(href="tel:0032498405783") +32 (0) 498 40 57 83]
                     p URL: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
-        a.swap(href="#link-verso" title="faire pivoter la carte de visite") swap
-        a.reverse(href="#link-recto" title="faire pivoter la carte de visite") reverse
+        a.a--swipe(href="#" title="faire pivoter la carte de visite") swap
 
         script(src="assets/js/script.js")
