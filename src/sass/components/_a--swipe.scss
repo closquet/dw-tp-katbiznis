@@ -1,0 +1,12 @@
+.a--swipe{
+    display: none;
+    width: 19em;
+    margin: 1em auto;
+    @include hide-text;
+    background: url("../images/flip-icon.svg") no-repeat;
+    height: 30px;
+    @media (min-width: 480px)
+    {
+        display: block;
+    }
+}
