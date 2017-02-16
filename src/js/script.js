@@ -7,42 +7,13 @@
 *
 */
 
-const $CardRecto = document.querySelector(".section--recto");
-const $CardVerso = document.querySelector(".section--verso");
+const $Card = document.querySelector(".card");
 const $ButtonSwipe = document.querySelector(".a--swipe");
 
-let sCardState = "recto";
 
-const fEnableVerso = function () {
-    $CardVerso.classList.add("front");
-    $CardVerso.classList.remove("back");
-};
-const fDisableVerso = function () {
-    $CardVerso.classList.add("back");
-    $CardVerso.classList.remove("front");
-};
-const fEnableRecto = function () {
-    $CardRecto.classList.add("front");
-    $CardRecto.classList.remove("back");
-};
-const fDisableRecto = function () {
-    $CardRecto.classList.add("back");
-    $CardRecto.classList.remove("front");
-};
-
-
-}
 const fSwipe = function (e) {
     e.preventDefault();
-    if (sCardState === "recto"){
-        fDisableRecto();
-        setTimeout(fEnableVerso, 1000);
-        sCardState = "verso";
-    }else {
-        fDisableVerso();
-        setTimeout(fEnableRecto, 1000);
-        sCardState = "recto";
-    }
+    $Card.classList.toggle('flipped');
 };
 
 /*****************************************************************************************************/
