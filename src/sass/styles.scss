@@ -12,10 +12,11 @@
 @import "base/page";
 @import "tools/utils";
 @import "objects/section";
+@import "objects/paragraphs";
+@import "objects/anchors";
+@import "objects/headings";
 @import "components/section--recto";
 @import "components/section--verso";
-@import "base/paragraphs";
-@import "base/anchors";
 @import "components/content";
 @import "components/a--swipe";
 @import "components/wrap";
