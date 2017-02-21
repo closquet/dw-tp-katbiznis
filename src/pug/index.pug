@@ -15,8 +15,8 @@ html(lang="fr")
 
     body
         .wrap
+            h1.body-title(role="heading" aria-level="1") Exercice wd-tp&nbsp;: Katbiznis
             .card
-                h1.body-title.hidden(role="heading" aria-level="1") Carte de visite de Eric Closquet
 
                 section.section.section--recto(aria-labelledby="recto")
                     h2.section__title.hidden#recto(role="heading" aria-level="2") Recto de la carte
@@ -27,9 +27,10 @@ html(lang="fr")
                 section.section.section--verso(aria-labelledby="verso")
                     h2.section__title.hidden#verso(role="heading" aria-level="2") Verso de la carte
                     .section__content
-                        p Email: #[a(href="mailto:test@live.be") test@live.be]
-                        p Phone: #[a(href="tel:0032498123456") +32 (0) 498 12 34 56]
-                        p URL: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
-        a.a--swipe(href="#" title="faire pivoter la carte de visite") swap
+                        p Email&nbsp;: #[a(href="mailto:test@live.be") test@live.be]
+                        p Phone&nbsp;: #[a(href="tel:0032498123456") +32 (0) 498 12 34 56]
+                        p URL&nbsp;: #[a(href="http://www.eric-closquet.be") http://www.eric-closquet.be]
+        .wrap
+            a.a--swipe(href="#" title="faire pivoter la carte de visite") swap
 
         script(src="assets/js/script.js")

@@ -1,8 +1,11 @@
 .wrap{
     height: 8em;
     width: 19em;
+    margin: 0 auto 3em;
     position: relative;
-    margin: 0px auto;
-    position: relative;
-    perspective: 600px;
+    perspective: 900px;
+    &:nth-of-type(2){
+        height: auto;
+        margin: 0 auto
+    }
 }
