@@ -11,16 +11,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import "base/page";
 @import "tools/utils";
-@import "objects/section";
-@import "objects/paragraphs";
-@import "objects/anchors";
-@import "objects/headings";
+@import "elements/sections";
+@import "elements/paragraphs";
+@import "elements/links";
+@import "elements/headings";
 @import "components/section--recto";
 @import "components/section--verso";
 @import "components/content";
 @import "components/a--swipe";
 @import "components/wrap";
-@import "components/card";
+@import "components/card"; 
 
 
 
